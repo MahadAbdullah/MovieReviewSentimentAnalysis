@@ -191,6 +191,8 @@ report = classification_report(
     test_data["sentiment"], predictions, output_dict=True, zero_division=0
 )
 print(f"{GREEN}Done.{RESET}")
+print("Positive:", report["positive"])
+print("Negative:", report["negative"])
 print("Accuracy:", report["accuracy"])
 
 # Test with custom reviews
